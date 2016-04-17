@@ -49,7 +49,7 @@ class CameraAndroid(CameraBase):
         width, height = self._resolution
         params.setPreviewSize(width, height)
         self._android_camera.setParameters(params)
-        # self._android_camera.setDisplayOrientation()
+        self._android_camera.setDisplayOrientation(0)
         self.fps = 30.
 
         pf = params.getPreviewFormat()
